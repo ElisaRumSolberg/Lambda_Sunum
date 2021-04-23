@@ -31,20 +31,14 @@ public class C7_Lambdada_ForLoop___Aralik_Kontrolu {
     // S7:325 ile 468 arasinda 8 bolunen sayilarin toplamini bulalim
 
     // S8: 7ile 55 arasindaki tek sayilarin carpimini bulalim
-    public static int car(int a,int b){
-        return IntStream.rangeClosed(a,b).filter(Methods::tekMi).reduce(1,Math::multiplyExact);
-    }
+
+
  //S9: poz tek sayilarin ilk 10 elemanin yazdiralim
-    public static void tekler(int son){
-        IntStream.iterate(1,i->i+2).limit(10).forEach(Methods::yaz);
-    }
+
+
     //S10: 21 den baslayan 7 nin katlarinin tek olanlari ilk 10 teriminin yaziralim
-    public  static void yedikatyaz(int son){
-        IntStream.iterate(21, T->T+7).limit(son).filter(Methods::tekMi).forEach(Methods::yaz);
-    }
+
 
     //S11: 21 den baslayan 7 nin katlarinin ilk 20 teriminin toplayalim
-    public  static int yedikatyazTop(int son){
-      return  IntStream.iterate(21, T->T+7).limit(son).sum();
-    }
+
 }
