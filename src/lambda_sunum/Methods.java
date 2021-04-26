@@ -44,6 +44,8 @@ public class Methods {
     public static void yaz2(IntStream S) {
         System.out.println(S+ " ");
     }
-
+ public static int top (int a,int b){
+        return a+b;
+ }
 
 }
