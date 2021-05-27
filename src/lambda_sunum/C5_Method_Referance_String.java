@@ -17,7 +17,7 @@ public class C5_Method_Referance_String {
     }
     // S1: Tum harfleri buyuk harf ile aralarinda bosluk birakarak yazdiralim
     public static void buyukYaz(List<String> l){
-       l.stream().map(String::toUpperCase).forEach(Methods::yaz1);
+       l.stream().map(String::toUpperCase).forEach(Methods::yazString);
 
     }
 

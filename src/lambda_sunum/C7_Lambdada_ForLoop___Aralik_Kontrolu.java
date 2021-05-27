@@ -12,13 +12,13 @@ int b=5;
 //ilk30dahil(a);
      //   System.out.println("top(a,b) = " + top(a, b));
 //ort(30,40);
-  System.out.println("sekizeBolunen(325,468) = " + sekizeBolunen(325, 468));
-      sekizeBolunenyaz(325,468);
-        System.out.println("sekizeBolunentop(325,468) = " + sekizeBolunentop(325, 468));
-      System.out.println("carpim(7,55) = " + carpim(7, 15));
-        ilk10(10);
-       yedininKati(10);
-        System.out.println("yediTop(20) = " + yediTop(20));
+//  System.out.println("sekizeBolunen(325,468) = " + sekizeBolunen(325, 468));
+//      sekizeBolunenyaz(325,468);
+   //     System.out.println("sekizeBolunentop(325,468) = " + sekizeBolunentop(325, 468));
+      System.out.println("carpim(7,15) = " + carpim(7, 15));
+     //   ilk10(10);
+     //  yedininKati(10);
+       // System.out.println("yediTop(20) = " + yediTop(20));
     }
     // S1:1 den 30 kadar olan sayilari (30 dahil degil) 1,2,.... seklinde siralayalim (for loopsuz)
     public static void ilk30(int a){
@@ -66,13 +66,13 @@ int b=5;
 
     // S8: 7ile 15 arasindaki tek sayilarin carpimini bulalim
     public static double carpim(int a, int b){
-        return IntStream.rangeClosed(a,b).filter(Methods::tekMi).reduce(1,(x,y)->x*y);
+        return IntStream.rangeClosed(a,b).filter(Methods::tekMi).peek(t-> System.out.println(t)).reduce(1,(x,y)->x*y);
     }
 
 
  //S9: poz tek sayilarin ilk 10 elemanin yazdiralim
     public static void ilk10(int a){
-        IntStream.iterate(1,t->t+2).limit(10).filter(Methods::tekMi).forEach(Methods::yaz);
+        IntStream.iterate(1,t->t+2).limit(10).filter(Methods::tekMi).forEach(Methods::yazint);
     }
 
 

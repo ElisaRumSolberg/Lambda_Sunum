@@ -62,7 +62,7 @@ public class C8_Dosya_Okuma {
 
         // S7:  metinde kactane "a"  vardir
         System.out.println("satir.filter(t->t.contains(\"a\")).count() = "
-                + satir.map(t->t.split(" ")).flatMap(Arrays::stream).
+                + satir.map(t->t.split("")).flatMap(Arrays::stream).
                 filter(t -> t.contains("a")).count());
     }
 }

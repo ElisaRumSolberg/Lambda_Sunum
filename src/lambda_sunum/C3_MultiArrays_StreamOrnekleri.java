@@ -33,6 +33,7 @@ public class C3_MultiArrays_StreamOrnekleri {
     public static void doubleyaz(String [][] str ){
         Arrays.stream(str).flatMap(t->Arrays.stream(t)).map(t->t+t).forEach(t-> System.out.println(t));
     }
+    // E ile baslayan elemanlari double (elmaelma) olarak listele
 public static List<String > doubleYazListeE(String [][]arr){
         return Arrays.stream(arr).flatMap(t->Arrays.stream(t)).filter(t->t.startsWith("E")).collect(Collectors.toList());
 }
@@ -42,4 +43,10 @@ public static List<String > doubleYazListeE(String [][]arr){
         Arrays.stream(arr).flatMap(t-> Arrays.stream(t)).
                 filter(t->t.endsWith("k")).map(t->t+"*").forEach(t-> System.out.println(t));
     }
+    public static void kbitenYildzEkle1(String[][]arr){
+        Arrays.stream(arr).flatMap(Arrays::stream).
+                filter(t->t.endsWith("k")).map(t->t+"*").forEach(t-> System.out.println(t));
+    }
+
+
 }

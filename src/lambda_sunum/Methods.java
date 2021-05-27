@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class Methods {
-    public static void yaz(int n){
+    public static void yazint(int n){
         System.out.print(n+" ");
     }
     ///////////////////////////////////////////
-    public static void yaz1(String s){
+    public static void yazString(String s){
         System.out.print(s+" ");
     }
     ////////////////////////////////

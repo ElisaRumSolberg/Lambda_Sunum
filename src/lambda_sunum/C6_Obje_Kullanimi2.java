@@ -35,7 +35,7 @@ public class C6_Obje_Kullanimi2 {
         //System.out.println("bransMat2(list) = " + bransMat2(list));
       //  System.out.println("geoOlmayan(list) = " + geoOlmayan(list));
 //yasSirala(list);
-
+//list.stream().
     }
      //S1 : yasi 30DAN buyuk olanlari listeleyelim
     public static List<Ogretmen> otuzdanBuyuk(List<Ogretmen> l){
@@ -65,7 +65,7 @@ public class C6_Obje_Kullanimi2 {
         return l.stream().filter(t->t.getBransi().contains("Matematik")).collect(Collectors.toList());
     }
 
-    //S5: bransi geometri  olmayan var mi
+//    S5: bransi geometri olmayanlari listeleyelim
     public static boolean geoOlmayan(List<Ogretmen>l){
         return l.stream().noneMatch(t->t.getBransi().equalsIgnoreCase("geometri"));
     }

@@ -20,7 +20,7 @@ public class C4_Method_Refarance_Int {
     }
     // S1: tekleri aralarinda bir bosluk birakarak yazdiralim
     public static void tekYaz(List<Integer>l){
-        l.stream().filter(Methods::tekMi).forEach(Methods::yaz);
+        l.stream().filter(Methods::tekMi).forEach(Methods::yazint);
     }
 
     // S2: ciftlein carpimini bulalim
@@ -31,12 +31,14 @@ public class C4_Method_Refarance_Int {
     // S3: negatiflerin kare toplamlarini  bulalim
     public static Optional<Integer> kareto(List<Integer>l){
         return l.stream().filter(Methods::negatifMi).map(Methods::kareBul).reduce(Methods::top);
+
     }
     public static int kareto1(List<Integer>l){
         return l.stream().filter(Methods::negatifMi).map(Methods::kareBul).reduce(0,(x,y)->x+y);
     }
 
-    //S4: poziflerin kuplerinden max yazdiralim
+
+    // S3: pozitiflerin kup max   bulalim
     public static Optional<Integer> kupMAX(List<Integer> l){
      return l.stream().filter(Methods::pozitifMi).map(Methods::kupBul).reduce(Math::max);
     }
